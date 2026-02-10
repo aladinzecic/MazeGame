@@ -1,0 +1,70 @@
+.full {
+    position: relative;
+    background-image: url(../../assets/wmremove-transformed_Nero_AI_Image_Upscaler_Photo_Face.webp);
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* vertikalni centar */
+    align-items: center;     /* horizontalni centar */
+}
+
+.full::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55); /* jačina tame */
+    z-index: 1;
+}
+
+/* SADRŽAJ IZNAD OVERLAY-A */
+.full h1 {
+    position: relative;
+    z-index: 2;
+    color: white;
+    font-size: 50px;
+}
+
+
+.curve-text {
+    position: relative;
+    z-index: 2;
+    top:-200px;
+}
+
+.curve-text text {
+    fill: white;
+    font-size: 58px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+.btn-full{
+    position: relative;
+    height: 30vh;
+    margin-top: -30vh;
+    display: flex;
+    justify-content: center; /* horizontalno centriranje */
+    align-items: center;     /* vertikalno centriranje */
+    width: 30%;
+}
+.btn-img{
+    transform: scale(0.5);
+    cursor: pointer;
+}
+.btn-full h1 {
+    cursor: pointer;
+    color: white;
+    font-size: 50px;
+    position: absolute; /* ne apsolutno */
+    /* z-index: 2;          */
+    margin: 0;          /* ukloni default margine */
+    letter-spacing: 5px;
+    top: 55px;
+    width: 55%;
+    height: 40%;
+    padding-top: 10px;
+    padding-left: 15%;
+}
