@@ -1,16 +1,20 @@
 .full {
+
     position: relative;
     background-image: url(../../assets/wmremove-transformed_Nero_AI_Image_Upscaler_Photo_Face.webp);
     background-size: cover;
     width: 100%;
-    height: 100vh;
-
+    height: 120vh;
     display: flex;
     flex-direction: column;
     justify-content: center; /* vertikalni centar */
     align-items: center;     /* horizontalni centar */
+    transition: transform 1.3s ease-in-out;
+    transform-origin: bottom;
 }
-
+.full.zoomed {
+    transform: scale(1.1) translateY(-100px);
+}
 .full::before {
     content: "";
     position: absolute;
@@ -67,4 +71,20 @@
     height: 40%;
     padding-top: 10px;
     padding-left: 15%;
+}
+.hidden{
+    display: none;
+}
+
+.characters{
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+}
+.characters img{
+    height: 100%;
+    width: auto;
+    transform: scale(1.3);
+    margin-top: 35vh;
 }
