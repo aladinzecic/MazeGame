@@ -1,0 +1,10 @@
+.cube-matrix{
+        position: relative;
+        height: 50vh;
+        width: 50vw;
+        z-index: 1000;
+        /* margin-left: -100px; za 5 */
+        margin-left: -380px; 
+        margin-top: 300px;
+}
+

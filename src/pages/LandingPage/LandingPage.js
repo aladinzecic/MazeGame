@@ -98,6 +98,10 @@ const SetCharacter=(char)=>{
       </div>
       <h1 className="title" ref={titleRef}>CHOOSE YOUR CHARACTER</h1>
       <img className="arrow" ref={arrowRef} src={arrow} />
+      {character>-1&&<div className="btn-div">
+        <img className="" src={btn} />
+        <h1 className="">CONTINUE</h1>
+      </div>}
       <div className="characters">
         <img className="" alt="" ref={char1Ref} src={kec} onClick={()=>setCharacter(0)} />
         <img className="" alt="" ref={char2Ref} src={dva} onClick={()=>setCharacter(1)}/>
