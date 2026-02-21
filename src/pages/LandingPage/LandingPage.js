@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import "./LandingPage.css";
 import btn from "../../assets/dugme.png";
-import kec from "../../assets/kec.png";
+import kec from "../../assets/char1/char1.png";
 import dva from "../../assets/dva.png";
 import tri from "../../assets/tri.png";
 import cetri from "../../assets/cetri.png";

@@ -4,7 +4,7 @@
     align-items: center;
     position: relative;
 
-    background-image: url(../../assets/background-main.png);
+    /* background-image: url(../../assets/background-main.png); */
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
