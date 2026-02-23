@@ -30,8 +30,8 @@
 }
 
 .top {
-  background: #9b59b6; /* ljubičasta */
-}
+  background: blue;
+  background-size: cover;}
 
 .bottom {
   background: #e67e22; /* narandžasta */

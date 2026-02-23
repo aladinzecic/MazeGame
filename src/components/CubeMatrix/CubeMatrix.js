@@ -18,6 +18,20 @@ const CreateMatrix = () => {
     }
   }
 
+      cubesc.push(
+        <Cube
+          key={`1111`}
+          top={125}
+          left={560}
+        />
+      );
+            cubesc.push(
+        <Cube
+          key={`1111`}
+          top={160}
+          left={630}
+        />
+      );
   setCubes(cubesc)
 };
 
