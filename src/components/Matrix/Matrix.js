@@ -89,7 +89,7 @@ function generateMazeMatrix(n) {
 }
 
 export default function Matrix() {
-  const [inputSize, setInputSize] = useState(8);
+  const [inputSize, setInputSize] = useState(4);
   const [maze, setMaze] = useState(generateMazeMatrix(8));
 
   const handleGenerate = () => {

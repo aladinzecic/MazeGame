@@ -3,7 +3,7 @@
   width: 100px;
   height: 100px;
   transform-style: preserve-3d;
-  transform: rotateX(-30deg) rotateY(45deg);
+  transform: rotateX(-50deg) rotateY(45deg);
 }
 
 .face {
@@ -13,25 +13,75 @@
   background: linear-gradient(145deg, #d4af37, #8b6b2e);
   border: 1px solid rgba(0,0,0,0.3);
 }
+
+.vertical .top{
+  background: url("../../assets/vertical.png");
+  background-size: cover;
+  transform: rotate(90);
+}
+.horizontal .top{
+  background: url("../../assets/horizontal.png");
+  background-size: cover;
+  transform: rotate(90);
+  /* filter: brightness(1.8); */
+}
+.edge-ur .top{
+  background: url("../../assets/edge-ur.png");
+  background-size: cover;
+}
+.edge-ul .top{
+  background: url("../../assets/edge-ul.png");
+  background-size: cover;
+}
+.edge-dr .top{
+  background: url("../../assets/edge-dr.png");
+  background-size: cover;
+}
+.edge-dl .top{
+  background: url("../../assets/edge-dl.png");
+  background-size: cover;
+}
+.cross-u .top{
+  background: url("../../assets/cross-u.png");
+  background-size: cover;
+}
+.cross-r .top{
+  background: url("../../assets/cross-r.png");
+  background-size: cover;
+}
+.cross-l .top{
+  background: url("../../assets/cross-l.png");
+  background-size: cover;
+}
+.cross-d .top{
+  background: url("../../assets/cross-d.png");
+  background-size: cover;
+}
+
 .front {
-  background: #e74c3c; /* crvena */
+  background: url("../../assets/btm.jpg");
+  background-size: cover;
 }
 
 .back {
-  background: #2ecc71; /* zelena */
+  background: url("../../assets/btm.jpg");
+  background-size: cover;
 }
 
 .right {
-  background: #3498db; /* plava */
+  background: url("../../assets/btm.jpg");
+  background-size: cover;
 }
 
 .left {
-  background: #f1c40f; /* žuta */
+  background: url("../../assets/btm.jpg");
+  background-size: cover;
+  z-index: 11!important;
 }
 
 .top {
-  background: blue;
-  background-size: cover;}
+  background-size: cover;
+}
 
 .bottom {
   background: #e67e22; /* narandžasta */

@@ -6,7 +6,6 @@ import MainGamePage from './pages/MainGamePage/MainGamePage';
 function App() {
   return (
       <MainGamePage/>
-
   );
 }
 

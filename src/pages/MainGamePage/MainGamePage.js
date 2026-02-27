@@ -10,7 +10,7 @@ export default function MainGamePage() {
   return (
     <div className='main-full'>
         <CubeMatrix rows={9}/>
-        <Character isMoving={1}/>
+        {/* <Character isMoving={1}/> */}
     </div>
   )
 }
