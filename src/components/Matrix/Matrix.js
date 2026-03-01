@@ -1,5 +1,13 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { AppContext } from "../../Context/AppContext";
 
+
+
+export default function Matrix() {
+    const {setMatrix}=useContext(AppContext)
+
+  const [inputSize, setInputSize] = useState(4);
+  const [maze, setMaze] = useState(generateMazeMatrix(8));
 function generateMazeMatrix(n) {
   const maze = Array(n)
     .fill()
@@ -84,14 +92,9 @@ function generateMazeMatrix(n) {
   // ulaz i izlaz
   matrix[1][0] = 0;
   matrix[size - 2][size - 1] = 0;
-
+  setMatrix(matrix)
   return matrix;
 }
-
-export default function Matrix() {
-  const [inputSize, setInputSize] = useState(4);
-  const [maze, setMaze] = useState(generateMazeMatrix(8));
-
   const handleGenerate = () => {
     setMaze(generateMazeMatrix(inputSize));
   };

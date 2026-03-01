@@ -76,7 +76,6 @@
 .left {
   background: url("../../assets/btm.jpg");
   background-size: cover;
-  z-index: 11!important;
 }
 
 .top {

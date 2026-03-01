@@ -1,9 +1,11 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Cube from "../Cube/Cube.js";
 import "./CubeMatrix.css";
 import Character from "../Character/Character.js";
+import { AppContext } from "../../Context/AppContext.js";
 
 export default function CubeMatrix({ rows }) {
+  const{setMatrix}=useContext(AppContext)
   function generateMazeMatrix(n) {
     const maze = Array(n)
       .fill()
@@ -97,12 +99,17 @@ export default function CubeMatrix({ rows }) {
     // ulaz i izlaz
     matrix[1][0] = 0;
     matrix[size - 2][size - 1] = 0;
-
     return matrix;
   }
 
   const [cubes, setCubes] = useState([]);
-  const [maze, setMaze] = useState(generateMazeMatrix(4));
+  const [maze, setMaze] = useState();
+
+useEffect(() => {
+  const newMaze = generateMazeMatrix(4);
+  setMaze(newMaze);
+  setMatrix(newMaze);
+}, []);
 
   const CreateMatrix = () => {
     const cubesc = [];
@@ -237,13 +244,14 @@ export default function CubeMatrix({ rows }) {
     setCubes(cubesc);
   };
 
-  useEffect(() => {
-    // setMaze(generateMazeMatrix(4));
+useEffect(() => {
+  if (maze) {
     CreateMatrix();
-  }, []);
+  }
+}, [maze]);
 
   return <div className="cube-matrix">
     {cubes}
-    <Character/>
+    <Character isMoving={1}/>
     </div>;
 }
