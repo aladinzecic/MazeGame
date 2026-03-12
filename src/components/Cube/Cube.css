@@ -10,7 +10,7 @@
   position: absolute;
   width: 100px;
   height: 100px;
-  background: linear-gradient(145deg, #d4af37, #8b6b2e);
+  /* background: linear-gradient(145deg, #d4af37, #8b6b2e); */
   border: 1px solid rgba(0,0,0,0.3);
 }
 
@@ -59,27 +59,29 @@
 }
 
 .front {
-  background: url("../../assets/btm.jpg");
-  background-size: cover;
+  background-color: #794d13;
+
 }
 
 .back {
-  background: url("../../assets/btm.jpg");
-  background-size: cover;
+  background-color: #5a3208;
+
 }
 
 .right {
-  background: url("../../assets/btm.jpg");
-  background-size: cover;
+  background-color: #5a3208;
+
 }
 
 .left {
-  background: url("../../assets/btm.jpg");
-  background-size: cover;
+  filter: brightness(1);
+
+  background-color: #5a3208;
 }
 
 .top {
-  background-size: cover;
+  filter: brightness(1)!important;
+  background-color: #5a3208;
 }
 
 .bottom {

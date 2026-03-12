@@ -15,7 +15,7 @@ export default function LandingPage() {
   const char3Ref = useRef(null);
   const char4Ref = useRef(null);
   const charRefs=[char1Ref,char2Ref,char3Ref,char4Ref]
-  const [zoomed, setZoomed] = useState(false);
+  const [zoomed, setZoomed] = useState(0);
   const [character,setCharacter]=useState(-1)
 const SetCharacter=(char)=>{
   if(charRefs[char-1].current){
@@ -36,14 +36,14 @@ const SetCharacter=(char)=>{
     arrowRef.current.style.display = "block";
     const rect = char1Ref.current.getBoundingClientRect();
     arrowRef.current.style.left = rect.left + rect.width / 2 -10 + "px";
-    arrowRef.current.style.top = rect.top + 20 + "px";
+    arrowRef.current.style.top = rect.top +200 + "px";
     SetCharacter(1)
   }
   else if (character === 1 && arrowRef.current && char2Ref.current) {
     arrowRef.current.style.display = "block";
     const rect = char2Ref.current.getBoundingClientRect();
     arrowRef.current.style.left = rect.left + rect.width / 2 -20 + "px";
-    arrowRef.current.style.top = rect.top + 20 + "px";
+    arrowRef.current.style.top = rect.top + 200 + "px";
     SetCharacter(2)
   }
   else if (character === 2 && arrowRef.current && char3Ref.current) {
@@ -73,7 +73,7 @@ const SetCharacter=(char)=>{
   return () => clearTimeout(timer);
   },[zoomed])
   return (
-    <div className={`full ${zoomed ? "zoomed" : ""}`}>
+    <div className={`full ${zoomed==1 ? "zoomed" :zoomed==2?"zoomed2": ""}`}>
       <svg className={`curve-text ${zoomed ? "hidden" : ""}`}  width="600" height="400" viewBox="0 0 600 1">
         <path
           id="arc"
@@ -91,7 +91,7 @@ const SetCharacter=(char)=>{
         <img className="btn-img" src={btn} alt="Play button" />
         <h1
           className="btn-text"
-          onClick={() => setZoomed(true)}
+          onClick={() => setZoomed(1)}
         >
           PLAY
         </h1>
@@ -100,7 +100,9 @@ const SetCharacter=(char)=>{
       <img className="arrow" ref={arrowRef} src={arrow} />
       {character>-1&&<div className="btn-div">
         <img className="" src={btn} />
-        <h1 className="">CONTINUE</h1>
+        <h1 className=""
+          onClick={() => setZoomed(2)}
+        >CONTINUE</h1>
       </div>}
       <div className="characters">
         <img className="" alt="" ref={char1Ref} src={kec} onClick={()=>setCharacter(0)} />

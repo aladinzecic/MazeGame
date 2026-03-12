@@ -52,12 +52,12 @@ className={`cube ${
         <div className="face front"
         style={{  zIndex: type === "down" ? 1 : 10,
 }}
-        >a</div>
-        <div className="face back">b</div>
-        <div className="face right">c</div>
-        <div className="face left">d</div>
-        <div className="face top" style={floorStyle}>e</div>
-        <div className="face bottom">f</div>
+        ></div>
+        <div className="face back"></div>
+        <div className="face right"></div>
+        <div className="face left"></div>
+        <div className="face top" style={floorStyle}></div>
+        <div className="face bottom"></div>
     </div>
   )
 }
